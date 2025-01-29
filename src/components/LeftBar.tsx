@@ -3,6 +3,7 @@ import Image from "./Image";
 import Socket from "./Socket";
 import Notification from "./Notification";
 import { currentUser } from "@clerk/nextjs/server";
+import Logout from "./Logout";
 
 const menuList = [
   {
@@ -136,7 +137,9 @@ const LeftBar = async () => {
                 <span className="text-sm text-textGray">@{user?.username}</span>
               </div>
             </div>
-            <div className="hidden xxl:block cursor-pointer font-bold">...</div>
+            {/* <div className="hidden xxl:block cursor-pointer font-bold">...</div> */}
+            {/* ADD LOGOUT */}
+            <Logout/>
           </div>
         </>
       )}
