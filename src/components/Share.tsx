@@ -36,7 +36,11 @@ const Share = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
-    if (state.success) formRef.current?.reset();
+    if (state.success) {
+      formRef.current?.reset();
+      setMedia(null);
+      setSettings({ type: "original", sensitive: false });
+    }
   }, [state]);
 
   return (
