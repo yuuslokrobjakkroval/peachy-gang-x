@@ -3,6 +3,7 @@
 import { likePost, rePost, savePost } from "@/action";
 import { socket } from "@/socket";
 import { useUser } from "@clerk/nextjs";
+import Link from "next/link";
 import { useOptimistic, useState } from "react";
 
 const PostInteractions = ({
@@ -120,7 +121,7 @@ const PostInteractions = ({
     <div className="flex items-center justify-between gap-4 lg:gap-16 my-2 text-textGray">
       <div className="flex items-center justify-between flex-1">
         {/* COMMENTS */}
-        <div className="flex items-center gap-2 cursor-pointer group">
+        <Link href={`/${username}/status/${postId}`} className="flex items-center gap-2 cursor-pointer group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -135,7 +136,7 @@ const PostInteractions = ({
           <span className="group-hover:text-iconBlue text-sm">
             {count.comments}
           </span>
-        </div>
+        </Link>
         {/* REPOST */}
         <form action={rePostAction}>
           <button className="flex items-center gap-2 cursor-pointer group">
