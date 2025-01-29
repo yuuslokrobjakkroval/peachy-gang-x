@@ -36,7 +36,7 @@ const Notification = () => {
     router.push(notification.link);
   };
   return (
-    <div className="relative">
+    <div className="relative mb-4">
       <div
         className="cursor-pointer p-2 rounded-full hover:bg-[#181818] flex items-center gap-4"
         onClick={() => setOpen((prev) => !prev)}
