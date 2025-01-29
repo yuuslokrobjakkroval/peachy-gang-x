@@ -15,7 +15,6 @@ const UserPage = async ({
 
   const username = (await params).username;
 
-
   const user = await prisma.user.findUnique({
     where: { username: username },
     include: {
@@ -73,8 +72,9 @@ const UserPage = async ({
           </div>
           {userId && (
             <FollowButton
-              userId={user.id}
-              isFollowed={!!user.followings.length}
+            userId={user.id}
+            isFollowed={!!user.followings.length}
+            username={username}
             />
           )}
         </div>
