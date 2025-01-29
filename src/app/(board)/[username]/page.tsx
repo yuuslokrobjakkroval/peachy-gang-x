@@ -85,7 +85,7 @@ const UserPage = async ({
             <h1 className="text-2xl font-bold">{user.displayName}</h1>
             <span className="text-textGray text-sm">@{user.username}</span>
           </div>
-          {user.bio && <p>{user.bio}Channel</p>}
+          {user.bio && <p>{user.bio}</p>}
           {/* JOB & LOCATION & DATE */}
           <div className="flex gap-4 text-textGray text-[15px]">
             {user.location && (
