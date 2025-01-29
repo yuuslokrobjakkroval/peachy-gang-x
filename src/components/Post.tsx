@@ -124,16 +124,22 @@ const Post = ({
             </p>
           </Link>
           {originalPost.img && (
-            <Image
-              path={originalPost.img}
-              alt=""
-              w={600}
-              h={originalPost.imgHeight || 600}
-            />
+            <div className="overflow-hidden">
+              <Image
+                path={originalPost.img}
+                alt=""
+                w={600}
+                h={originalPost.imgHeight || 600}
+                className={originalPost.isSensitive ? "blur-3xl" : ""}
+              />
+            </div>
           )}
           {originalPost.video && (
             <div className="rounded-lg overflow-hidden">
-              <Video path={originalPost.video} />
+              <Video
+                path={originalPost.video}
+                className={originalPost.isSensitive ? "blur-3xl" : ""}
+              />
             </div>
           )}
           {type === "status" && (
