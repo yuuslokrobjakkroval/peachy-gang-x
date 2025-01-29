@@ -131,6 +131,11 @@ const Post = ({
               h={originalPost.imgHeight || 600}
             />
           )}
+          {originalPost.video && (
+            <div className="rounded-lg overflow-hidden">
+              <Video path={originalPost.video} />
+            </div>
+          )}
           {type === "status" && (
             <span className="text-textGray">8:41 PM · Dec 5, 2024</span>
           )}
