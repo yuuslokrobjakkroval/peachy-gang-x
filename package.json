@@ -16,7 +16,6 @@
     "imagekit": "^6.0.0",
     "imagekitio-next": "^1.0.1",
     "next": "15.1.0",
-    "prisma": "^6.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-infinite-scroll-component": "^6.1.0",
@@ -30,16 +29,23 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@types/node": "^20.17.31",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
+    "prisma": "^6.6.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
-  }
+  },
+  "description": "First, run the development server:",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
