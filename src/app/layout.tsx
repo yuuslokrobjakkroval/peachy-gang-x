@@ -6,7 +6,7 @@ import QueryProvider from "@/providers/QueryProvider";
 
 export const metadata: Metadata = {
   title: "PEACHY GANG",
-  description: "Next.js social media application project",
+  description: "is social media application",
 };
 
 export default function AppLayout({
